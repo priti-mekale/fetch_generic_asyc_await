@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student form</title>
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+   <div class="container-fluid mt-5">
+        <div class="row">
+            <!-- Student Form -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="studentForm">
+                            <h3 class="text-center"><i class="fa-solid fa-user"></i>Student form</h3>
+                            <input type="hidden" required id="editingIndex" value="-1">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" required id="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text"required id="lastName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" required id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input type="text"required id="contact" class="form-control" required>
+                            </div>
+
+                            <button id="addStudentBtn" type="submit" class="btn btn-outline-primary btn-sm btn-block">Add Student</button>
+                            <button type="button" id="updateStudentBtn" class="btn d-none btn-outline-success btn-sm btn-block">Update Student</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered bg-white">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Sr.no</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Edit </th>
+                                <th>Remove </th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentContainer">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+  <div id="loader" class="d-none text-center my-3">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden"></span>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JS Script reference (you can link your JS here) -->
+    <script src="./assets/js/app.js"></script> 
+</body>
+
+</html>
